@@ -1,0 +1,59 @@
+from random import randint
+import time
+n='y'
+a=[]
+while n=='y' or n=='Y':
+	print "WELCOME TO MIND SCANNER"
+	raw_input()
+
+	print "STEP 1:Choose any 2 digit number any number from 10 to 99"
+	print "just imagine a number it is secret  DONT TELL OR DONT TYPE"
+	print " press enter when ready..."
+	raw_input()
+	print "STEP 2:Add together both digits of original number and then subtract total from your original number."
+	print "Example: If you chose 42:  4+2=6  42-6=(36)<--note this  "
+
+	print "press enter when ready..."
+	raw_input()
+	print "STEP 3:Look up symbol for the number you got in step 2."
+	raw_input()
+	c=randint(33,47)
+	
+	for j in range(99):
+		if j%9!=0:
+			a.append(randint(33,47))
+	 			
+		else:
+			a.append(c)
+	  
+	t=0
+	k=0
+	for i in range(9):
+	  	for j in range(11):
+			if i==0:
+				print t,"=",chr(a[k]),"  ",
+	    		else:
+	    			print t,"=",chr(a[k])," ",
+	    		t+=1
+	    		k+=1
+	    
+	    	print ""
+		print ""
+	    
+	print "press enter when ready"
+	raw_input()
+	print "SCANNING PLEASE WAIT..."
+	time.sleep(5)
+	print "RETINA SCAN IN PROGRESS..."
+	time.sleep(5)
+	print "SCAN SUCCESSFUL"
+	print "Your symbol is:"
+	print "        ",chr(c)
+	raw_input()	
+
+	print " DO YOU WANT TO TRY ONCE MORE : press 'Y' "
+	print " TO QUIT FROM GAME : press 'N'"
+	n=raw_input()
+else:
+	print "THANK U"
+
